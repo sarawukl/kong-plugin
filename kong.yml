@@ -1,0 +1,16 @@
+_format_version: "1.1"
+_transform: true
+
+services:
+  - host: httpbin.org
+    name: example_service
+    port: 443
+    protocol: https
+    routes:
+      - name: example_route
+        paths:
+          - /anything
+        strip_path: false
+plugins:
+  - name: myplugin
+    enabled: true
